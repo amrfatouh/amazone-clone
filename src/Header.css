@@ -3,7 +3,8 @@
     background-color: #092559;
     padding: 5px 20px;
     z-index: 1;
-    position: relative;
+    position: sticky;
+    top: 0;
 }
 
 .nav .nav-logo {
