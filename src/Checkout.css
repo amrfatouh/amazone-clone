@@ -1,0 +1,46 @@
+.checkout-container {
+    display: flex;
+    margin: 20px;
+}
+
+.left {
+    margin-right: 20px;
+    flex: 2;
+}
+
+.left img {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.left h2 {
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 10px;
+    width: 80%;
+}
+
+.right {
+    flex: 1;
+}
+
+.right .subtotal {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #aaa;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+.right button {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px 15px;
+    background-color: rgb(231, 165, 85);
+    border: 1px solid rgb(190, 136, 70);
+    outline: 1px solid rgb(179, 117, 42);
+}

@@ -1,11 +1,12 @@
 import React from 'react'
 import './Header.css'
+import { Link } from 'react-router-dom'
 
 function Header() {
     return (
         <div className='nav'>
             <div className='nav-logo'>
-                <img src='./logo.png' />
+                <Link to='/'><img src='./logo.png' /></Link>
             </div>
             <div className='search-bar'>
                 <input type='text' />
@@ -24,10 +25,12 @@ function Header() {
                     <small>Your</small>
                     <strong>Prime</strong>
                 </div>
-                <div className='cart'>
-                    <i class="fas fa-shopping-cart"></i>
-                    <strong>0</strong>
-                </div>
+                <Link to='/checkout'>
+                    <div className='cart'>
+                        <i class="fas fa-shopping-cart"></i>
+                        <strong>0</strong>
+                    </div>
+                </Link>
             </div>
         </div>
     )

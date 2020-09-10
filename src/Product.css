@@ -1,0 +1,28 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 20px;
+    padding: 15px;
+    background-color: #fff;
+    position: relative;
+    flex: 1;
+}
+
+.product .info {
+    margin-bottom: 10px;
+}
+
+.product img {
+    width: 150px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.product button {
+    width: 150px;
+    margin: auto;
+    background-color: rgb(231, 165, 85);
+    border: 1px solid rgb(190, 136, 70);
+    outline: 1px solid rgb(179, 117, 42);
+}
