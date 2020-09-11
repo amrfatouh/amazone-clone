@@ -47,6 +47,7 @@
 .nav .options .option {
     display: flex;
     flex-direction: column;
+    color: #fff;
 }
 
 .nav .options .cart {

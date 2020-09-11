@@ -15,10 +15,12 @@ function Header() {
                 <i class="fas fa-search"></i>
             </div>
             <div className="options">
-                <div class='option'>
-                    <small>Hello</small>
-                    <strong>Sign in</strong>
-                </div>
+                <Link to='/login'>
+                    <div class='option'>
+                        <small>Hello</small>
+                        <strong>Sign in</strong>
+                    </div>
+                </Link>
                 <div class='option'>
                     <small>returns</small>
                     <strong>& orders</strong>

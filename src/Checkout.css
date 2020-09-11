@@ -23,3 +23,7 @@
 .right {
     flex: 1;
 }
+
+.checkout-products-container {
+    margin-top: 20px;
+}
