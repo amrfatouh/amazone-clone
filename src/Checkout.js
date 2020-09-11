@@ -13,6 +13,7 @@ function Checkout() {
                     <img src="./ad.jpg" alt="" />
                 </div>
                 <div className="basket">
+                    <h3>Hello, {user?.email}</h3>
                     <h2>Your Shopping Basket</h2>
                     <div className="checkout-products-container">
                         {basket.map(product => {
