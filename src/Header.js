@@ -3,6 +3,8 @@ import './Header.css'
 import { Link } from 'react-router-dom'
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 function Header() {
     const [{ basket, user }, dispatch] = useStateValue();
@@ -20,26 +22,26 @@ function Header() {
             </div>
             <div className='search-bar'>
                 <input type='text' />
-                <i class="fas fa-search"></i>
+                <FontAwesomeIcon className='fa' icon={faSearch} />
             </div>
             <div className="options">
                 <Link to={!user && '/login'}>
-                    <div onClick={handleAuthenticaton} class='option'>
-                        <small>Hello Guest</small>
+                    <div onClick={handleAuthenticaton} className='option'>
+                        <small>Hello {user ? user.email.split('@')[0] : 'Guest'}</small>
                         <strong>{user ? 'Sign Out' : 'Sign In'}</strong>
                     </div>
                 </Link>
-                <div class='option'>
+                <div className='option'>
                     <small>returns</small>
-                    <strong>& orders</strong>
+                    <strong>&amp; orders</strong>
                 </div>
-                <div class='option'>
+                <div className='option'>
                     <small>Your</small>
                     <strong>Prime</strong>
                 </div>
                 <Link to='/checkout'>
                     <div className='cart'>
-                        <i class="fas fa-shopping-cart"></i>
+                        <FontAwesomeIcon className='fa' icon={faShoppingCart} />
                         <strong>{basket?.length}</strong>
                     </div>
                 </Link>

@@ -3,11 +3,13 @@ import './Login.css'
 import { Link, useHistory } from 'react-router-dom';
 import { auth } from "./firebase";
 
-function Login() {
+function Login(props) {
 
+    console.log(props)
     const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
     const signIn = e => {
         e.preventDefault();
@@ -17,7 +19,7 @@ function Login() {
             .then(auth => {
                 history.push('/')
             })
-            .catch(error => alert(error.message))
+            .catch(error => setError(error.message))
     }
 
     const register = e => {
@@ -31,7 +33,7 @@ function Login() {
                     history.push('/')
                 }
             })
-            .catch(error => alert(error.message))
+            .catch(error => setError(error.message))
     }
 
     return (
@@ -51,6 +53,7 @@ function Login() {
                     see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.</p>
                     <button className='sign-up' onClick={register}>Create Amazon Account</button>
                 </form>
+                <div className="error"><small>{error ? error : null}</small></div>
             </div>
         </div>
     )

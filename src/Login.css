@@ -19,6 +19,10 @@
     text-align: left;
 }
 
+.form-container form {
+    margin-bottom: 10px;
+}
+
 .form-container h2 {
     margin-bottom: 10px;
     text-align: center;
@@ -49,4 +53,9 @@
 .form-container button.sign-up {
     width: 100%;
     padding: 5px 10px;
+}
+
+.form-container .error {
+    color: #c00;
+    line-height: 1;
 }

@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+}
+
 .nav {
     display: flex;
     background-color: #092559;
@@ -17,7 +21,7 @@
 }
 
 .nav .search-bar {
-    flex: 3;
+    flex: 5;
     display: flex;
     align-items: center;
 }
@@ -29,16 +33,18 @@
     box-sizing: border-box;
 }
 
-.nav .search-bar i {
+.nav .search-bar .fa {
     background-color: #CD8C3F;
     width: 29px;
     height: 29px;
     line-height: 29px;
     text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
 }
 
 .nav .options {
-    flex: 1;
+    flex: 2;
     display: flex;
     justify-content: space-between;
     color: #fff;
@@ -59,7 +65,7 @@
     height: 100%;
 }
 
-.nav .options .cart i {
+.nav .options .cart .fa {
     margin-right: 15px;
     font-size: 20px;
 }
